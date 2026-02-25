@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ControlStock | Gestión de Inventario</title>
+    <meta
+      name="description"
+      content="ControlStock: aplicación web para gestión de inventario y control de productos."
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="container navbar__content">
+        <div class="navbar__brand">
+          <span class="navbar__title">ControlStock</span>
+        </div>
+
+        <nav class="navbar__navigation">
+          <a href="#dashboard">Dashboard</a>
+          <a href="#inventory">Inventario</a>
+          <a href="#create-product">Nuevo Producto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- DASHBOARD -->
+      <section id="dashboard" class="section">
+        <div class="container">
+          <div class="section__header">
+            <h1>Panel de Control</h1>
+            <p class="section__description">
+              Visualización general del estado del inventario.
+            </p>
+          </div>
+
+          <div class="metrics-grid">
+            <article class="card metric">
+              <p class="metric__label">Total de productos</p>
+              <p class="metric__value">12</p>
+            </article>
+
+            <article class="card metric">
+              <p class="metric__label">Stock disponible</p>
+              <p class="metric__value">380</p>
+            </article>
+
+            <article class="card metric">
+              <p class="metric__label">Ventas registradas hoy</p>
+              <p class="metric__value">5</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- INVENTARIO -->
+      <section id="inventory" class="section">
+        <div class="container">
+          <div class="section__header section__header--row">
+            <div>
+              <h2>Inventario</h2>
+              <p class="section__description">
+                Listado actual de productos registrados.
+              </p>
+            </div>
+
+            <div class="search-container">
+              <input
+                type="search"
+                class="input"
+                placeholder="Buscar producto..."
+              />
+            </div>
+          </div>
+
+          <div class="card table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Categoría</th>
+                  <th class="align-right">Stock</th>
+                  <th class="align-right">Precio</th>
+                  <th class="align-right">Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Arroz 500g</td>
+                  <td>Abarrotes</td>
+                  <td class="align-right">45</td>
+                  <td class="align-right">$3.500</td>
+                  <td class="align-right">
+                    <span class="status status--available">
+                      Disponible
+                    </span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Leche 1L</td>
+                  <td>Lácteos</td>
+                  <td class="align-right">18</td>
+                  <td class="align-right">$4.200</td>
+                  <td class="align-right">
+                    <span class="status status--low">
+                      Bajo stock
+                    </span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Huevos x12</td>
+                  <td>Proteína</td>
+                  <td class="align-right">0</td>
+                  <td class="align-right">$8.900</td>
+                  <td class="align-right">
+                    <span class="status status--out">
+                      Agotado
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- NUEVO PRODUCTO -->
+      <section id="create-product" class="section">
+        <div class="container">
+          <div class="section__header">
+            <h2>Registrar nuevo producto</h2>
+            <p class="section__description">
+              Formulario para ingreso de productos al inventario.
+            </p>
+          </div>
+
+          <div class="card">
+            <form class="form">
+              <div class="form-grid">
+                <label class="form-field">
+                  <span>Nombre del producto</span>
+                  <input
+                    type="text"
+                    class="input"
+                    placeholder="Ej: Atún 160g"
+                  />
+                </label>
+
+                <label class="form-field">
+                  <span>Categoría</span>
+                  <input
+                    type="text"
+                    class="input"
+                    placeholder="Ej: Enlatados"
+                  />
+                </label>
+
+                <label class="form-field">
+                  <span>Stock inicial</span>
+                  <input
+                    type="number"
+                    class="input"
+                    min="0"
+                    placeholder="Ej: 20"
+                  />
+                </label>
+
+                <label class="form-field">
+                  <span>Precio unitario</span>
+                  <input
+                    type="text"
+                    class="input"
+                    placeholder="Ej: 6.500"
+                  />
+                </label>
+              </div>
+
+              <div class="form-actions">
+                <button type="button" class="button button--primary">
+                  Guardar
+                </button>
+
+                <button type="reset" class="button button--secondary">
+                  Limpiar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 ControlStock. Proyecto académico.</p>
+      </div>
+    </footer>
+  </body>
+</html>
