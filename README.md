@@ -1,61 +1,71 @@
-# ControlStock
+# ChumBlum Distribuidores
 
-Aplicación web para la gestión de inventario y control de productos.  
-Proyecto académico desarrollado bajo una metodología incremental orientada al desarrollo asistido por Inteligencia Artificial.
+Aplicación web para la gestión de inventario y pedidos del emprendimiento Helados Chum Blum.
+
+Proyecto académico desarrollado bajo una metodología incremental orientada al desarrollo progresivo (HTML → CSS → JavaScript → React → Firebase).
 
 ---
 
 ## 📌 Descripción
 
-ControlStock es una aplicación web diseñada para administrar productos, visualizar el estado del inventario y estructurar una base sólida para la gestión de stock.
+ChumBlum Distribuidores es una aplicación web diseñada para administrar el stock de sabores y permitir a los distribuidores crear pedidos con validación automática de inventario.
 
-En esta primera fase se desarrolla:
+El sistema busca reemplazar el uso de hojas de cálculo compartidas y la validación manual vía WhatsApp, proporcionando un flujo más eficiente y controlado.
+
+En la fase actual se desarrolla:
 
 - Estructura semántica utilizando HTML5.
 - Sistema de estilos organizado con CSS3.
-- Documentación técnica dentro de la carpeta `docs/` para proporcionar contexto estructurado a herramientas de Inteligencia Artificial.
-- Base preparada para futuras fases de desarrollo con JavaScript, React y Firebase.
+- Documentación técnica dentro de la carpeta `docs/`.
+- Base preparada para futuras fases con JavaScript, React y Firebase.
 
 ---
 
 ## 🏗 Metodología de Desarrollo
 
-El proyecto se desarrolla en tres fases:
+El proyecto se desarrolla de manera incremental por fases:
 
 ### Fase 1 — Estructura y Diseño (Actual)
 - HTML semántico.
 - CSS modular.
-- Documentación técnica en la carpeta `docs/`.
+- Definición del sistema de diseño.
+- Documentación técnica en `docs/`.
 
 ### Fase 2 — Interactividad
 - JavaScript (ES6).
 - Manipulación del DOM.
-- Validaciones de formularios.
-- Gestión dinámica de productos.
+- Validación automática de stock.
+- Gestión dinámica de pedidos.
 - Persistencia en LocalStorage.
 
-### Fase 3 — Escalabilidad
-- React (componentización).
-- Firebase (Authentication + Firestore).
+### Fase 3 — Componentización
+- Migración a React.
+- Organización en componentes reutilizables.
+- Manejo de estado y rutas.
+
+### Fase 4 — Backend as a Service
+- Firebase Authentication (roles).
+- Firestore como base de datos.
+- Persistencia real de inventario y pedidos.
 - Despliegue en hosting profesional.
 
 ---
 
 ## 📂 Estructura del Proyecto
 
-controlstock/
+chumblum-distribuidores/
 
-├── assets/            # Recursos estáticos (imágenes, iconos, etc.)
-├── css/
-│   └── styles.css     # Hoja de estilos principal
-├── docs/
-│   ├── project_scope.md
-│   ├── design_system.md
-│   └── tech_stack.md
-│
-├── index.html
-├── .gitignore
-└── README.md
+├── assets/ # Recursos estáticos (imágenes, iconos)  
+├── css/  
+│   └── styles.css # Hoja de estilos principal  
+├── docs/  
+│   ├── project_scope.md  
+│   ├── design_system.md  
+│   └── tech_stack.md  
+├── pages/ # Vistas internas (admin, distribuidor)  
+├── index.html # Login (punto de entrada)  
+├── .gitignore  
+└── README.md  
 
 ---
 
@@ -63,28 +73,5 @@ controlstock/
 
 1. Clonar el repositorio:
 
-git clone https://github.com/TU-USUARIO/controlstock.git
-
-2. Abrir el archivo `index.html` en el navegador.
-
-No requiere servidor ni dependencias adicionales en esta fase.
-
----
-
-## 🎯 Objetivo Académico
-
-Este proyecto tiene como finalidad:
-
-- Aplicar buenas prácticas en la estructura de repositorios.
-- Definir requerimientos funcionales y visuales antes de desarrollar lógica.
-- Construir documentación clara que sirva como contexto para herramientas de Inteligencia Artificial.
-- Preparar una base escalable para una aplicación web moderna.
-
----
-
-## 👥 Equipo de Desarrollo
-
-- Juan Manotas
-- Eliana  
-
-Proyecto académico — 2026
+```bash
+git clone https://github.com/TU-USUARIO/chumblum-distribuidores.git
