@@ -1,204 +1,69 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ControlStock | Gestión de Inventario</title>
-    <meta
-      name="description"
-      content="ControlStock: aplicación web para gestión de inventario y control de productos."
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChumBlum Distribuidores — Login</title>
+  <meta name="description" content="Ingreso a ChumBlum Distribuidores." />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
 
-  <body>
-    <header class="navbar">
-      <div class="container navbar__content">
-        <div class="navbar__brand">
-          <span class="navbar__title">ControlStock</span>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="app-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">🍦</span>
+        <div class="brand-text">
+          <strong class="brand-name">ChumBlum</strong>
+          <span class="brand-subtitle">App</span>
         </div>
-
-        <nav class="navbar__navigation">
-          <a href="#dashboard">Dashboard</a>
-          <a href="#inventory">Inventario</a>
-          <a href="#create-product">Nuevo Producto</a>
-        </nav>
       </div>
-    </header>
 
-    <main>
-      <!-- DASHBOARD -->
-      <section id="dashboard" class="section">
-        <div class="container">
-          <div class="section__header">
-            <h1>Panel de Control</h1>
-            <p class="section__description">
-              Visualización general del estado del inventario.
-            </p>
-          </div>
+      <nav class="header-actions" aria-label="Acciones">
+        <button type="button" class="btn btn-ghost">Ayuda</button>
+      </nav>
+    </div>
+  </header>
 
-          <div class="metrics-grid">
-            <article class="card metric">
-              <p class="metric__label">Total de productos</p>
-              <p class="metric__value">12</p>
-            </article>
-
-            <article class="card metric">
-              <p class="metric__label">Stock disponible</p>
-              <p class="metric__value">380</p>
-            </article>
-
-            <article class="card metric">
-              <p class="metric__label">Ventas registradas hoy</p>
-              <p class="metric__value">5</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- INVENTARIO -->
-      <section id="inventory" class="section">
-        <div class="container">
-          <div class="section__header section__header--row">
+  <main id="main" class="app-main">
+    <div class="container">
+      <section class="auth-layout" aria-label="Ingreso al sistema">
+        <div class="card auth-card">
+          <header class="card-header">
             <div>
-              <h2>Inventario</h2>
-              <p class="section__description">
-                Listado actual de productos registrados.
+              <h1 class="card-title">Iniciar sesión</h1>
+              <p class="card-subtitle">Accede para consultar stock y crear pedidos.</p>
+            </div>
+          </header>
+
+          <div class="card-content">
+            <form class="form" action="#" method="post">
+              <label class="input-group" for="email">
+                <span class="input-label">Correo</span>
+                <input id="email" type="email" placeholder="correo@ejemplo.com" required />
+              </label>
+
+              <label class="input-group" for="password">
+                <span class="input-label">Contraseña</span>
+                <input id="password" type="password" placeholder="••••••••" required />
+              </label>
+
+              <div class="btn-row">
+                <!-- En Fase 1, estos enlaces simulan navegación por rol -->
+                <a class="btn btn-ghost" href="./pages/distribuidor-pedido.html">Entrar como Distribuidor</a>
+                <a class="btn btn-primary" href="./pages/admin-stock.html">Entrar como Admin</a>
+              </div>
+
+              <p class="hint">
+                * En esta fase (UI), el login es de demostración. En fases siguientes se implementará autenticación real.
               </p>
-            </div>
-
-            <div class="search-container">
-              <input
-                type="search"
-                class="input"
-                placeholder="Buscar producto..."
-              />
-            </div>
-          </div>
-
-          <div class="card table-container">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>Producto</th>
-                  <th>Categoría</th>
-                  <th class="align-right">Stock</th>
-                  <th class="align-right">Precio</th>
-                  <th class="align-right">Estado</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Arroz 500g</td>
-                  <td>Abarrotes</td>
-                  <td class="align-right">45</td>
-                  <td class="align-right">$3.500</td>
-                  <td class="align-right">
-                    <span class="status status--available">
-                      Disponible
-                    </span>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Leche 1L</td>
-                  <td>Lácteos</td>
-                  <td class="align-right">18</td>
-                  <td class="align-right">$4.200</td>
-                  <td class="align-right">
-                    <span class="status status--low">
-                      Bajo stock
-                    </span>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Huevos x12</td>
-                  <td>Proteína</td>
-                  <td class="align-right">0</td>
-                  <td class="align-right">$8.900</td>
-                  <td class="align-right">
-                    <span class="status status--out">
-                      Agotado
-                    </span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- NUEVO PRODUCTO -->
-      <section id="create-product" class="section">
-        <div class="container">
-          <div class="section__header">
-            <h2>Registrar nuevo producto</h2>
-            <p class="section__description">
-              Formulario para ingreso de productos al inventario.
-            </p>
-          </div>
-
-          <div class="card">
-            <form class="form">
-              <div class="form-grid">
-                <label class="form-field">
-                  <span>Nombre del producto</span>
-                  <input
-                    type="text"
-                    class="input"
-                    placeholder="Ej: Atún 160g"
-                  />
-                </label>
-
-                <label class="form-field">
-                  <span>Categoría</span>
-                  <input
-                    type="text"
-                    class="input"
-                    placeholder="Ej: Enlatados"
-                  />
-                </label>
-
-                <label class="form-field">
-                  <span>Stock inicial</span>
-                  <input
-                    type="number"
-                    class="input"
-                    min="0"
-                    placeholder="Ej: 20"
-                  />
-                </label>
-
-                <label class="form-field">
-                  <span>Precio unitario</span>
-                  <input
-                    type="text"
-                    class="input"
-                    placeholder="Ej: 6.500"
-                  />
-                </label>
-              </div>
-
-              <div class="form-actions">
-                <button type="button" class="button button--primary">
-                  Guardar
-                </button>
-
-                <button type="reset" class="button button--secondary">
-                  Limpiar
-                </button>
-              </div>
             </form>
           </div>
         </div>
       </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container">
-        <p>© 2026 ControlStock. Proyecto académico.</p>
-      </div>
-    </footer>
-  </body>
+    </div>
+  </main>
+</body>
 </html>

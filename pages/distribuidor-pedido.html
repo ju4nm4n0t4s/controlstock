@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChumBlum — Panel de Distribuidor</title>
+  <meta name="description" content="Distribuidor: consulta stock y crea pedidos." />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="app-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">🍦</span>
+        <div class="brand-text">
+          <strong class="brand-name">ChumBlum</strong>
+          <span class="brand-subtitle">Panel de Distribuidor</span>
+        </div>
+      </div>
+
+      <nav class="header-actions" aria-label="Acciones">
+        <button type="button" class="btn btn-ghost">Ayuda</button>
+        <a class="btn btn-primary" href="../index.html">Cerrar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="app-main">
+    <div class="container">
+      <section class="dashboard-header">
+        <h1 class="page-title">Panel de Distribuidor</h1>
+        <p class="page-subtitle">Consulta el stock y crea tu pedido.</p>
+
+        <div class="kpi-grid" role="list" aria-label="Indicadores">
+          <article class="card kpi" role="listitem">
+            <p class="kpi-label">Sabores disponibles</p>
+            <p class="kpi-value">12</p>
+          </article>
+          <article class="card kpi" role="listitem">
+            <p class="kpi-label">Pedidos activos</p>
+            <p class="kpi-value">2</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="grid-2col" aria-label="Stock y pedido">
+        <!-- Stock -->
+        <section class="card" aria-label="Stock disponible">
+          <header class="card-header">
+            <h2 class="card-title">Stock disponible</h2>
+            <div class="card-actions">
+              <label class="input-group" for="searchFlavor">
+                <span class="input-label">Buscar</span>
+                <input id="searchFlavor" type="search" placeholder="Buscar sabor..." />
+              </label>
+            </div>
+          </header>
+
+          <div class="card-content">
+            <div class="table-wrap" role="region" aria-label="Tabla de stock" tabindex="0">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Sabor</th>
+                    <th>Estado</th>
+                    <th>Cantidad</th>
+                    <th>Acción</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mora en Leche</td>
+                    <td><span class="pill confirmed">Disponible</span></td>
+                    <td>45</td>
+                    <td><button class="btn btn-ghost" type="button">+</button></td>
+                  </tr>
+                  <tr>
+                    <td>Oreo Especial</td>
+                    <td><span class="pill pending">Poco stock</span></td>
+                    <td>8</td>
+                    <td><button class="btn btn-ghost" type="button">+</button></td>
+                  </tr>
+                  <tr>
+                    <td>Arequipe</td>
+                    <td><span class="pill confirmed">Disponible</span></td>
+                    <td>20</td>
+                    <td><button class="btn btn-ghost" type="button">+</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Carrito -->
+        <section class="card" aria-label="Tu pedido actual">
+          <header class="card-header">
+            <div>
+              <h2 class="card-title">Tu pedido actual</h2>
+              <p class="card-subtitle">Ajusta cantidades y confirma.</p>
+            </div>
+          </header>
+
+          <div class="card-content">
+            <div class="order-list">
+              <!-- Ejemplo de items (Fase 1) -->
+              <div class="order-item">
+                <div>
+                  <p class="order-item-title">Mora en Leche</p>
+                  <p class="order-item-meta">Cantidad: 1</p>
+                </div>
+                <div class="order-item-actions">
+                  <button class="btn btn-ghost" type="button">✕</button>
+                </div>
+              </div>
+
+              <div class="order-item">
+                <div>
+                  <p class="order-item-title">Oreo Especial</p>
+                  <p class="order-item-meta">Cantidad: 1</p>
+                </div>
+                <div class="order-item-actions">
+                  <button class="btn btn-ghost" type="button">✕</button>
+                </div>
+              </div>
+
+              <div class="order-summary">
+                <div class="summary-row">
+                  <span class="muted">Total unidades</span>
+                  <strong>2</strong>
+                </div>
+              </div>
+
+              <div class="btn-row">
+                <button class="btn btn-primary" type="button">Confirmar pedido</button>
+                <button class="btn btn-ghost" type="button">Vaciar carrito</button>
+              </div>
+
+              <p class="hint">* En fases siguientes se validará stock y se mostrará NeedsAction si falta disponibilidad.</p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

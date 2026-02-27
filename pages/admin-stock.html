@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChumBlum — Admin Inventario</title>
+  <meta name="description" content="Administración de inventario ChumBlum." />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="app-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">🍦</span>
+        <div class="brand-text">
+          <strong class="brand-name">ChumBlum</strong>
+          <span class="brand-subtitle">Admin · Inventario</span>
+        </div>
+      </div>
+
+      <nav class="header-actions" aria-label="Acciones">
+        <a class="btn btn-ghost" href="../index.html">Cerrar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="app-main">
+    <div class="container">
+      <section class="dashboard-header">
+        <h1 class="page-title">Inventario</h1>
+        <p class="page-subtitle">Visualiza el stock actual y registra producción.</p>
+        <div class="kpi-grid" role="list" aria-label="Indicadores">
+          <article class="card kpi" role="listitem">
+            <p class="kpi-label">Pedidos hoy</p>
+            <p class="kpi-value">5</p>
+          </article>
+          <article class="card kpi" role="listitem">
+            <p class="kpi-label">Sabores con bajo stock</p>
+            <p class="kpi-value">3</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="grid-2col" aria-label="Inventario y registro de producción">
+        <!-- Stock actual -->
+        <section class="card" aria-label="Stock actual">
+          <header class="card-header">
+            <h2 class="card-title">Stock actual</h2>
+            <div class="card-actions">
+              <label class="input-group" for="searchAdmin">
+                <span class="input-label">Buscar</span>
+                <input id="searchAdmin" type="search" placeholder="Buscar sabor..." />
+              </label>
+            </div>
+          </header>
+
+          <div class="card-content">
+            <div class="table-wrap" role="region" aria-label="Tabla de stock" tabindex="0">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Sabor</th>
+                    <th>Disponible</th>
+                    <th>Precio unitario</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Datos de ejemplo (Fase 1) -->
+                  <tr>
+                    <td>Mora en Leche</td>
+                    <td >45</td>
+                    <td class="price">$ 3.500</td>
+                  </tr>
+                  <tr>
+                    <td>Oreo Especial</td>
+                    <td>8</td>
+                    <td>$ 4.000</td>
+                  </tr>
+                  <tr>
+                    <td>Arequipe</td>
+                    <td>20</td>
+                    <td>$ 3.800</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="hint">En fases siguientes podrás editar precios y ver alertas por stock bajo.</p>
+          </div>
+        </section>
+
+        <!-- Registrar producción -->
+        <section class="card" aria-label="Registrar producción">
+          <header class="card-header">
+            <div>
+              <h2 class="card-title">Registrar producción</h2>
+              <p class="card-subtitle">Suma unidades al inventario.</p>
+            </div>
+          </header>
+
+          <div class="card-content">
+            <form class="form" action="#" method="post">
+              <label class="input-group" for="flavor">
+                <span class="input-label">Sabor</span>
+                <select id="flavor" required>
+                  <option value="">Selecciona un sabor</option>
+                  <option>Mora en Leche</option>
+                  <option>Oreo Especial</option>
+                  <option>Arequipe</option>
+                </select>
+              </label>
+
+              <label class="input-group" for="qty">
+                <span class="input-label">Cantidad producida</span>
+                <input id="qty" type="number" min="1" placeholder="Ej: 10" required />
+              </label>
+
+              <label class="input-group" for="date">
+                <span class="input-label">Fecha</span>
+                <input id="date" type="date" required />
+              </label>
+
+              <div class="btn-row">
+                <button class="btn btn-primary" type="button">Guardar</button>
+                <button class="btn btn-ghost" type="reset">Limpiar</button>
+              </div>
+
+            </form>
+          </div>
+        </section>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
