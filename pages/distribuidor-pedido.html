@@ -67,6 +67,7 @@
                     <th>Sabor</th>
                     <th>Estado</th>
                     <th>Cantidad</th>
+                    <th>Precio unitario</th>
                     <th>Acción</th>
                   </tr>
                 </thead>
@@ -75,18 +76,21 @@
                     <td>Mora en Leche</td>
                     <td><span class="pill confirmed">Disponible</span></td>
                     <td>45</td>
+                    <td>$ 3.500</td>
                     <td><button class="btn btn-ghost" type="button">+</button></td>
                   </tr>
                   <tr>
                     <td>Oreo Especial</td>
                     <td><span class="pill pending">Poco stock</span></td>
                     <td>8</td>
+                    <td>$ 4.000</td>
                     <td><button class="btn btn-ghost" type="button">+</button></td>
                   </tr>
                   <tr>
                     <td>Arequipe</td>
                     <td><span class="pill confirmed">Disponible</span></td>
                     <td>20</td>
+                    <td>$ 3.800</td>
                     <td><button class="btn btn-ghost" type="button">+</button></td>
                   </tr>
                 </tbody>
@@ -111,6 +115,7 @@
                 <div>
                   <p class="order-item-title">Mora en Leche</p>
                   <p class="order-item-meta">Cantidad: 1</p>
+                  <p class="order-item-subtotal">Subtotal: $ 3.500</p>
                 </div>
                 <div class="order-item-actions">
                   <button class="btn btn-ghost" type="button">✕</button>
@@ -121,6 +126,7 @@
                 <div>
                   <p class="order-item-title">Oreo Especial</p>
                   <p class="order-item-meta">Cantidad: 1</p>
+                  <p class="order-item-subtotal">Subtotal: $ 4.000</p>
                 </div>
                 <div class="order-item-actions">
                   <button class="btn btn-ghost" type="button">✕</button>
@@ -132,14 +138,16 @@
                   <span class="muted">Total unidades</span>
                   <strong>2</strong>
                 </div>
+                <div class="summary-row">
+                  <span class="muted">Total general</span>
+                  <strong>$ 7.500</strong>
+                </div>
               </div>
 
               <div class="btn-row">
                 <button class="btn btn-primary" type="button">Confirmar pedido</button>
                 <button class="btn btn-ghost" type="button">Vaciar carrito</button>
               </div>
-
-              <p class="hint">* En fases siguientes se validará stock y se mostrará NeedsAction si falta disponibilidad.</p>
             </div>
           </div>
         </section>
